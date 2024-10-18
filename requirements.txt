@@ -1,4 +1,6 @@
 pygame
 numpy
 appdirs
-pybag
+Flask
+Flask-SocketIO
+opencv-python-headless

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebRTC Pygame</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>WebRTC Pygame</h1>
+    <img id="gameCanvas" width="640" height="480" />
+    <script>
+        const socket = io();
+
+        const gameCanvas = document.getElementById('gameCanvas');
+
+        socket.on('frame', (data) => {
+            gameCanvas.src = 'data:image/jpeg;base64,' + data;
+        });
+
+        socket.on('webrtc_signal', async data => {
+            // Handle WebRTC signaling here
+        });
+
+        // WebRTC setup code here
+    </script>
+</body>
+</html>
